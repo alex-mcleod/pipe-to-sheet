@@ -16,6 +16,8 @@ import StringIO
 
 import json
 
+import os
+
 
 DEFAULT_TITLE = "Data"
 
@@ -23,7 +25,7 @@ SCOPE = ['https://www.googleapis.com/auth/drive', 'https://spreadsheets.google.c
 
 URL = 'https://docs.google.com/spreadsheets/d/{sheet_id}/edit#gid=0'
 
-DRIVE_CREDENTIALS = json.loads(open('~/.gs/credentials.json'))
+DRIVE_CREDENTIALS = json.loads(open(os.path.expanduser('~/.gs/credentials.json')))
 
 
 def get_credentials():
